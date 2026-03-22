@@ -1,12 +1,15 @@
 import React from "react";
-import { Alert, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import HomeEmptyState from "@/components/home/home-empty-state";
 import HomeHeader from "@/components/home/home-header";
 
 const HomeScreen = () => {
+  const router = useRouter();
+
   const onCreateMealPlan = () => {
-    Alert.alert("Create meal plan", "Action hooked. Connect this to your flow.");
+    router.push("../new-plan");
   };
 
   return (
